@@ -228,6 +228,7 @@ import {
   projectSetupRoute,
   projectsBootstrapRoutes,
   projectsRoutes,
+  promptInjectionManifestRoutes,
   promptInjectionPreviewRoutes,
   promptInjectionRoutes,
   proposalRoutes,
@@ -3173,6 +3174,7 @@ async function main(): Promise<void> {
   await app.register(configSecretsRoutes);
   await app.register(rulesRoutes);
   await app.register(promptInjectionRoutes);
+  await app.register(promptInjectionManifestRoutes);
   await app.register(promptInjectionPreviewRoutes);
   await app.register(servicesRoutes, {
     lifecycle: {
